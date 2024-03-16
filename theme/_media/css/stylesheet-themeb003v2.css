@@ -1,0 +1,169 @@
+.block-layout .title {
+    text-transform: var(--title-case);
+    font-family: var(--custom-title-font-family, var(--title-font-family));
+    font-weight: var(--title-weight);
+    font-style: var(--title-style);
+    letter-spacing: var(--title-spacing);
+}
+
+.block-layout.block-layout .sub-title {
+    text-transform: var(--sub-title-case);
+    font-family: var(--custom-sub-title-font-family, var(--sub-title-font-family));
+    font-weight: var(--sub-title-weight);
+    font-style: var(--sub-title-style);
+    letter-spacing: var(--sub-title-spacing);
+}
+
+body {
+    font-family: var(--custom-base-font-family, var(--body-font-family));
+}
+
+.themeb000 .button {
+    font-family: var(--title-font-family);
+}
+
+.block-layout .title-reverse .sub-title {
+    margin-bottom: 0;
+}
+
+/* SHALLOW BLOCK BASE TITLES */
+
+.block-layout.shallow-block .titles+.text {
+    margin-top: 1rem;
+}
+
+.shallow-block .sub-title,
+.shallow-block .title {
+    margin-bottom: 1rem;
+}
+
+.shallow-block .sub-title {
+    font-size: var(--text-small);
+    letter-spacing: 0.1rem;
+    /* line-height: 1; */
+}
+
+.shallow-block .sub-title:not(.text-size) {
+    font-size: var(--text-small);
+}
+
+.shallow-block .title-underline .sub-title {
+    line-height: 1.5;
+}
+
+.shallow-block .title-underline .title:after {
+    content: "";
+    width: 8rem;
+    height: 2px;
+    background-color: var(--title-underline-color, var(--g-accent-color));
+    display: block;
+    margin-top: 1rem;
+}
+
+.shallow-block .title-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.shallow-block .title-underline .title.title[style*="center"]::after,
+.shallow-block .content-center .title-underline .title:after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shallow-block .title-underline .title.title[style*="right"]::after,
+.shallow-block .content-right .title-underline .title:after {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.shallow-block .title-underline .title.title[style*="left"]::after,
+.shallow-block .content-left .title-underline .title:after {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* SHALLOW BLOCK BASE CONTENT ALIGNMENT */
+
+.shallow-block .image-container,
+.shallow-block .title,
+.shallow-block .content-left .image-container,
+.shallow-block .content-left .title,
+.shallow-block .content-left {
+    text-align: left;
+}
+
+.shallow-block .content-left .button-list {
+    justify-content: flex-start;
+}
+
+.shallow-block .content-center .image-container,
+.shallow-block .content-center .title,
+.shallow-block .content-center {
+    text-align: center;
+}
+
+.shallow-block .content-center .button-list {
+    justify-content: center;
+}
+
+.shallow-block .content-right .image-container,
+.shallow-block .content-right .title,
+.shallow-block .content-right {
+    text-align: right;
+}
+
+.shallow-block .content-right .button-list {
+    justify-content: flex-end;
+}
+
+/* THEME SPECIFIC */
+
+.header-003 .clip-top,
+.header-003 .clip-bottom,
+.header-003-master .clip-top,
+.header-003-master .clip-bottom,
+.footer-006 .clip-top,
+.footer-006 .clip-bottom,
+.footer-006-master .clip-top,
+.footer-006-master .clip-bottom,
+.header-003-v2 .clip-top,
+.header-003-v2 .clip-bottom,
+.header-003-master-v2 .clip-top,
+.header-003-master-v2 .clip-bottom,
+.footer-006-v2 .clip-top,
+.footer-006-v2 .clip-bottom,
+.footer-006-master-v2 .clip-top,
+.footer-006-master-v2 .clip-bottom {
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.header-003 .title,
+.header-003-master .title,
+.footer-006 .name-brand .title,
+.footer-006-master .name-brand .title,
+.header-003-v2 .title,
+.header-003-master-v2 .title,
+.footer-006-v2 .name-brand .title,
+.footer-006-master-v2 .name-brand .title {
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header-003 .small-title,
+.header-003-master .small-title,
+.header-003-v2 .small-title,
+.header-003-master-v2 .small-title {
+    font-family: 'Italiana', serif;
+    font-size: 1.3rem;
+}
+
+/* CONENT PACKAGE FIX */
+
+.title-100.title-100 .title {
+    padding: 0;
+}
